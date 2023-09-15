@@ -1,14 +1,20 @@
 import React from "react";
-
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./components/LandingPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Pdfuploader from "./components/Pdfuploader";
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/Pdfuploader" element={<Pdfuploader />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
