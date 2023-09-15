@@ -13,6 +13,11 @@ function Pdfuploader() {
     }
   };
 
+  const handleDelete = (index: number) => {
+    list.splice(index, 1);
+    setList([...list]);
+  };
+
   useEffect(() => {
     console.log(list); // Log the updated list in a useEffect
   }, [list]);
@@ -54,7 +59,7 @@ function Pdfuploader() {
                   />
                 </svg>
               </Button>
-              <Button>
+              <Button onClick={() => handleDelete(index)}>
                 Delete &nbsp;
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
