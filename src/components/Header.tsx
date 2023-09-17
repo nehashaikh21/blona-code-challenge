@@ -1,3 +1,9 @@
+// ---------------------------------------------------------
+// Author: Neha Shaikh
+// Description: Header for component pages.
+// Version: 1.0
+// ---------------------------------------------------------
+
 import React, { PureComponent } from "react";
 import { Button } from "react-bootstrap";
 
