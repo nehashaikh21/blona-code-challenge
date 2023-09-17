@@ -66,7 +66,7 @@ function Pdfuploader() {
       return;
     }
 
-    const data = await files[pdfIndex].arrayBuffer();
+    const data = await files.arrayBuffer();
     console.log(files);
     const getPdf = await pdfjs.getDocument(data);
 
