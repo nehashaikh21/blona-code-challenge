@@ -8,11 +8,16 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.50",
+    "@types/pdfjs-dist": "^2.10.378",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "axios": "^1.5.0",
     "bootstrap": "^5.3.1",
     "dotenv": "^16.3.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.0.4",
+    "pdfjs-dist": "^3.10.111",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-cookie": "^6.1.1",
@@ -45,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/pdf-parse": "^1.1.1"
   }
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
-
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
@@ -43,44 +42,51 @@ function LandingPage() {
 
   return (
     <>
-      <h1>Blona</h1>
-      <h4>AI CoPilot for Manufacturing</h4>
-      <Container className="p-3 mt-5">
-        <Form onSubmit={(e) => handleSubmit(e)}>
-          <Row className="mb-3">
-            <Col md={{ span: 4, offset: 4 }}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control
-                  name="username"
-                  required
-                  onChange={(e) =>
-                    setValues({ ...values, [e.target.name]: e.target.value })
-                  }
-                  type="text"
-                  placeholder="Enter username"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col md={{ span: 4, offset: 4 }}>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Control
-                  name="password"
-                  required
-                  onChange={(e) =>
-                    setValues({ ...values, [e.target.name]: e.target.value })
-                  }
-                  type="password"
-                  placeholder="Password"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
-        </Form>
+      <div className="m-5 text-center">
+        <h1>Blona</h1>
+        <h4>AI CoPilot for Manufacturing</h4>
+      </div>
+      <Container
+        fluid
+        className="d-flex justify-content-center align-items-center text-center"
+      >
+        <div className="rounded shadow m-3 p-5">
+          <Form onSubmit={(e) => handleSubmit(e)}>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control
+                    name="username"
+                    required
+                    onChange={(e) =>
+                      setValues({ ...values, [e.target.name]: e.target.value })
+                    }
+                    type="text"
+                    placeholder="Enter username"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Control
+                    name="password"
+                    required
+                    onChange={(e) =>
+                      setValues({ ...values, [e.target.name]: e.target.value })
+                    }
+                    type="password"
+                    placeholder="Password"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Button className="m-3" variant="primary" type="submit">
+              Login
+            </Button>
+          </Form>
+        </div>
       </Container>
     </>
   );
