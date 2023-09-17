@@ -1,4 +1,9 @@
-import React from "react";
+// ---------------------------------------------------------
+// Author: Neha Shaikh
+// Description: Routing of different pages.
+// Version: 1.0
+// ---------------------------------------------------------
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./components/LandingPage";

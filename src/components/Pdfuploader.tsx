@@ -1,3 +1,9 @@
+// ---------------------------------------------------------
+// Author: Neha Shaikh
+// Description: Takes pdf files as input and parses it with pdfjs-dist. Displays the parsed text on button click.
+// Version: 1.0
+// ---------------------------------------------------------
+
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import { Container, Button } from "react-bootstrap";
@@ -53,13 +59,14 @@ function Pdfuploader() {
   const handleClose = () => setShow(false);
 
   //Parse the uploaded pdf with pdf.js-dist
-  const parsePdf = async (index: number) => {
+
+  const parsePdf = async (pdfIndex: number) => {
     if (!files) {
       console.error("No file to parse.");
       return;
     }
 
-    const data = await files.arrayBuffer();
+    const data = await files[pdfIndex].arrayBuffer();
     console.log(files);
     const getPdf = await pdfjs.getDocument(data);
 
