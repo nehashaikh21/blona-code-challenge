@@ -9,6 +9,8 @@ import { TextItem } from "pdfjs-dist/types/src/display/api";
 import ListGroup from "react-bootstrap/ListGroup";
 import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
 import Header from "./Header";
+
+//configure pdf.js worker source
 GlobalWorkerOptions.workerSrc = window.location.origin + "/pdf.worker.min.js";
 
 function Pdfuploader() {
@@ -18,6 +20,7 @@ function Pdfuploader() {
   const [parsedText, setParsedText] = useState<string | null>(null);
   const [pdfIndex, setpdfIndex] = useState<number | null>(null);
 
+  //handle file change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       console.log(e.target.files[0]);
@@ -25,6 +28,7 @@ function Pdfuploader() {
     }
   };
 
+  //Handle file deletion
   const handleDelete = (index: number) => {
     list.splice(index, 1);
     setList([...list]);
@@ -48,6 +52,7 @@ function Pdfuploader() {
   };
   const handleClose = () => setShow(false);
 
+  //Parse the uploaded pdf with pdf.js-dist
   const parsePdf = async (index: number) => {
     if (!files) {
       console.error("No file to parse.");

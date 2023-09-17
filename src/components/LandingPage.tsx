@@ -16,6 +16,7 @@ function LandingPage() {
 
   const [values, setValues] = useState<Values>({ username: "", password: "" });
 
+  // Handle form submission by sending request to server for validation of username and password
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
