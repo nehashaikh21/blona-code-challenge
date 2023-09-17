@@ -20,10 +20,10 @@ function LandingPage() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      console.log(process.env.REACT_APP_SERVER + "auth/login");
+      console.log(process.env.REACT_APP_SERVER + "/auth/login");
 
       const { data } = await axios.post(
-        process.env.REACT_APP_SERVER + "auth/login",
+        process.env.REACT_APP_SERVER + "/auth/login",
         {
           ...values,
         },
