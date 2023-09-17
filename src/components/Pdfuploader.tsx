@@ -8,6 +8,7 @@ import * as pdfjs from "pdfjs-dist";
 import { TextItem } from "pdfjs-dist/types/src/display/api";
 import ListGroup from "react-bootstrap/ListGroup";
 import { GlobalWorkerOptions } from "pdfjs-dist/build/pdf";
+import Header from "./Header";
 GlobalWorkerOptions.workerSrc = window.location.origin + "/pdf.worker.min.js";
 
 function Pdfuploader() {
@@ -80,6 +81,7 @@ function Pdfuploader() {
 
   return (
     <>
+      <Header />
       <Container className="d-flex justify-content-center align-items-center text-center m-5 p-3">
         <div>
           <Form.Group controlId="formFile" className="mb-3">
@@ -93,7 +95,11 @@ function Pdfuploader() {
                 />
               </Col>
               <Col xs="auto">
-                <Button type="button" className="m-3" onClick={handleSubmit}>
+                <Button
+                  type="button"
+                  className="m-3 btn"
+                  onClick={handleSubmit}
+                >
                   Upload
                 </Button>
               </Col>
@@ -124,7 +130,7 @@ function Pdfuploader() {
               </div>
               <div className="float-end">
                 <Button
-                  className="m-3 float-end"
+                  className="m-3 float-end btn"
                   onClick={() => handleParse(index)}
                 >
                   Parse &nbsp;
@@ -143,7 +149,7 @@ function Pdfuploader() {
                   </svg>
                 </Button>
                 <Button
-                  className="m-3 float-end"
+                  className="m-3 float-end btn"
                   onClick={() => handleDelete(index)}
                 >
                   Delete &nbsp;

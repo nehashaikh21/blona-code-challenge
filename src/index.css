@@ -1,6 +1,4 @@
 body {
-
-  background-color: #5a55f4;
   margin: 20%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,4 +11,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+  color: #5a55f4 !important;
+}
+
+.formcontainer{
+  border-color: #5a55f4 !important;
+  box-shadow: #5a55f4;
+}
+
+.btn{
+  background-color:#5a55f4 !important;
 }

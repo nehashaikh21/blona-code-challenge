@@ -50,7 +50,7 @@ function LandingPage() {
         fluid
         className="d-flex justify-content-center align-items-center text-center"
       >
-        <div className="rounded shadow m-3 p-5">
+        <div className="rounded shadow m-3 p-5 formcontainer">
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Row>
               <Col>
@@ -82,7 +82,7 @@ function LandingPage() {
                 </Form.Group>
               </Col>
             </Row>
-            <Button className="m-3" variant="primary" type="submit">
+            <Button className="m-3 loginbtn" type="submit">
               Login
             </Button>
           </Form>
